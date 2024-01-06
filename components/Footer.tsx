@@ -69,6 +69,10 @@ export function InputForm() {
           </form>
         </Form>
       </div>
+      <hr />
+      <p className="text-center text-gray-400">
+        © 2024 Ryohei Kamei. All Rights Reserved.
+      </p>
     </div>
   );
 }

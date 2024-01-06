@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import image_1 from "./image_1.png";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {

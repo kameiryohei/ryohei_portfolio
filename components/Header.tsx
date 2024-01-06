@@ -20,6 +20,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 const Header = () => {
   const { setTheme } = useTheme();
@@ -63,66 +64,56 @@ const Header = () => {
 
   return (
     <div className="py-8 px-20 flex items-center justify-between">
-      <Link href={"/"}>Ryoのポートフォリオサイト🚀</Link>
-      <div className="flex items-center gap-6">
+      <div className="text-3xl font-bold">
+        <Link href={"/"}>RYO.</Link>
+      </div>
+      <div className="flex items-center gap-8">
         <div>
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <NavigationMenuItem className="ml-[200px]">
+                <NavigationMenuTrigger>About me</NavigationMenuTrigger>
+                <NavigationMenuContent className="">
+                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] max-w-screen">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           href="/"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            shadcn/ui
+                          <Image
+                            src="/takegram.jpg"
+                            alt="亀井涼平"
+                            width={120}
+                            height={240}
+                            className="rounded-lg"
+                          />
+                          <div className="mb-2 mt-4 text-lg font-medium ">
+                            亀井涼平
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            名城大学情報工学部所属の学生が作成したポートフォリオサイトです。
+                            Belongs to the Faculty of Information Engineering,
+                            Meijo University
                           </p>
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/docs" title="Introduction">
-                      Re-usable components built using Radix UI and Tailwind
-                      CSS.
+                    <ListItem href="/univ-hack" title="授業内開発">
+                      研究開発リテラシやPBL概論での開発経験について書いています
                     </ListItem>
-                    <ListItem href="/docs/installation" title="Installation">
-                      How to install dependencies and structure your app.
+                    <ListItem href="/hackathon" title="課外活動">
+                      自主的に参加したハッカソンについて書いています
                     </ListItem>
-                    <ListItem
-                      href="/docs/primitives/typography"
-                      title="Typography"
-                    >
-                      Styles for headings, paragraphs, lists...etc
+                    <ListItem href="/screen1" title="写真投稿">
+                      私の好きな写真を見たり、あなたの好きな写真を投稿できるページです
                     </ListItem>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {components.map((component) => (
-                      <ListItem
-                        key={component.title}
-                        title={component.title}
-                        href={component.href}
-                      >
-                        {component.description}
-                      </ListItem>
-                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/screen1" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Documentation
+                    Photos
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
