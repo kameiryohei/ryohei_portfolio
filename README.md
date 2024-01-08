@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RYO. Portfolio Site
 
-## Getting Started
+このプロジェクトは、情報工学を専攻する私が参加したハッカソンや授業内開発に関する情報を提供するために作成された Next.js ベースのウェブアプリケーションです。各ページでは、参加したイベントや学んだこと、成果物のリンクなどが詳細に記載されています。
 
-First, run the development server:
+## 主なコンポーネント
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### `app/hackathon/page.tsx`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+このコンポーネントは、ハッカソンに関する情報を表示します。ハッカソンの概要や参加理由、学んだこと、成果物のリンクなどが含まれています。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### `app/univ-hack/page.tsx`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+大学の授業内開発に関する情報を表示するコンポーネントです。授業の概要や学んだこと、成果物のリンクなどが記載されています。
 
-## Learn More
+### `app/page.tsx`
 
-To learn more about Next.js, take a look at the following resources:
+ホームページのメインコンポーネントであり、プロジェクト全体の概要やナビゲーションが含まれています。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `app/screen1/page.tsx`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+このコンポーネントは、名前とコンテンツと画像を入力するフォームがあり、firebase のデータベースに保存されます。ユーザーが写真や説明を投稿できるようになっています。他の人が投稿した画像も見ることが出来ます。
 
-## Deploy on Vercel
+各コンポーネントは React で記述されており、ページごとに異なる情報を提供しています。ユーザーはそれぞれのページから、私の活動や成果物に関する詳細な情報を得ることができます。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**デプロイ先 URL**
+[ここをクリック！](https://ryohei-portfolio.vercel.app)
