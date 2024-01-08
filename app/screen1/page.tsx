@@ -105,7 +105,8 @@ const Page: React.FC = () => {
   };
   const handleFormSubmit = (event: FormEvent) => {
     event.preventDefault();
-    handlePostButtonClick();
+
+    addReview();
   };
 
   return (
@@ -159,12 +160,7 @@ const Page: React.FC = () => {
           />
         </div>
 
-        <Button
-          type="submit"
-          className="mt-4"
-          variant="outline"
-          onClick={() => handlePostButtonClick()}
-        >
+        <Button type="submit" className="mt-4" variant="outline">
           投稿する
         </Button>
       </form>
