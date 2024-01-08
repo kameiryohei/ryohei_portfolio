@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -18,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="jp">
+    <html lang="ja">
       <body className={notoSansJP.className}>
         <ThemeProvider
           attribute="class"
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

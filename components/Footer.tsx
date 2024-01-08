@@ -44,31 +44,6 @@ export function InputForm() {
 
   return (
     <div>
-      <h3 className="px-20">お問い合わせ先</h3>
-      <div className="py-4 px-20 flex items-center justify-between">
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="w-2/3 space-y-6"
-          >
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormDescription>ここにメールアドレスを入力</FormDescription>
-                  <FormControl>
-                    <Input placeholder="mail-address" {...field} />
-                  </FormControl>
-                  <Button type="submit">送信</Button>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </form>
-        </Form>
-      </div>
       <hr />
       <p className="text-center text-gray-400">
         © 2024 Ryohei Kamei. All Rights Reserved.

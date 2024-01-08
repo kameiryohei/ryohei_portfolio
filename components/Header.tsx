@@ -63,88 +63,92 @@ const Header = () => {
   ];
 
   return (
-    <div className="py-8 px-20 flex items-center justify-between">
-      <div className="text-3xl font-bold">
-        <Link href={"/"}>RYO.</Link>
-      </div>
-      <div className="flex items-center gap-8">
-        <div>
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem className="ml-[200px]">
-                <NavigationMenuTrigger>About me</NavigationMenuTrigger>
-                <NavigationMenuContent className="">
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] max-w-screen">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
-                        >
-                          <Image
-                            src="/takegram.jpg"
-                            alt="亀井涼平"
-                            width={120}
-                            height={240}
-                            className="rounded-lg"
-                          />
-                          <div className="mb-2 mt-4 text-lg font-medium ">
-                            亀井涼平
-                          </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Belongs to the Faculty of Information Engineering,
-                            Meijo University
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                    <ListItem href="/univ-hack" title="授業内開発">
-                      研究開発リテラシやPBL概論での開発経験について書いています
-                    </ListItem>
-                    <ListItem href="/hackathon" title="課外活動">
-                      自主的に参加したハッカソンについて書いています
-                    </ListItem>
-                    <ListItem href="/screen1" title="写真投稿">
-                      私の好きな写真を見たり、あなたの好きな写真を投稿できるページです
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/screen1" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Photos
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="py-8 px-20 flex items-center justify-between">
+        <div className="text-3xl font-bold">
+          <Link href={"/"}>RYO.</Link>
         </div>
+        <div className="flex items-center gap-8">
+          <div>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem className="ml-[200px]">
+                  <NavigationMenuTrigger>About me</NavigationMenuTrigger>
+                  <NavigationMenuContent className="">
+                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] max-w-screen">
+                      <li className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <a
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                            href="/"
+                          >
+                            <Image
+                              src="/takegram.jpg"
+                              alt="亀井涼平"
+                              width={120}
+                              height={240}
+                              className="rounded-lg"
+                            />
+                            <div className="mb-2 mt-4 text-lg font-medium ">
+                              亀井涼平
+                            </div>
+                            <p className="text-sm leading-tight text-muted-foreground">
+                              Belongs to the Faculty of Information Engineering,
+                              Meijo University
+                            </p>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                      <ListItem href="/univ-hack" title="授業内開発">
+                        研究開発リテラシやPBL概論での開発経験について書いています
+                      </ListItem>
+                      <ListItem href="/hackathon" title="課外活動">
+                        自主的に参加したハッカソンについて書いています
+                      </ListItem>
+                      <ListItem href="/screen1" title="写真投稿">
+                        私の好きな写真を見たり、あなたの好きな写真を投稿できるページです
+                      </ListItem>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/screen1" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Photos
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
 
-        <div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                <span className="sr-only">Toggle theme</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>
-                Light
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>
-                Dark
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>
-                System
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setTheme("light")}>
+                  Light
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                  Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("system")}>
+                  System
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
