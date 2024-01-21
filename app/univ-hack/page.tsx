@@ -51,7 +51,7 @@ const Page: React.FC = () => {
   }, []);
 
   return (
-    <div className="px-24 py-7 mt-24">
+    <div className="lg:p-24 p-8 mt-24">
       <h1 className="font-bold text-3xl bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
         授業内開発
       </h1>

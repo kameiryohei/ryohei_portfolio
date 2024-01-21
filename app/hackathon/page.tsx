@@ -62,7 +62,7 @@ const Hackathon: React.FC = () => {
   }, []);
 
   return (
-    <div className="px-24 py-7 mt-24">
+    <div className="lg:p-24 p-8 mt-24">
       <h1 className="font-bold text-3xl bg-gradient-to-r from-green-300 to-pink-500 bg-clip-text text-transparent">
         課外活動（ハッカソン）
       </h1>

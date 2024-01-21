@@ -110,12 +110,12 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className="px-24 min-h-screen py-2 mt-24">
-      <p className="py-6 text-4xl bg-clip-text text-transparent bg-gradient-to-r font-bold from-red-500 to-yellow-500">
+    <div className="lg:p-24 p-8 mt-24">
+      <p className="py-6 text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r font-bold from-red-500 to-yellow-500">
         Post any photo you like!
       </p>
-      <div className="flex items-center justify-center">
-        <p className="text-2xl mt-4 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center">
+        <p className="text-base md:text-2xl break-normal mt-4 text-center">
           ここではあなたの好きな写真を投稿することができます！
           <br />
           素敵な写真をみんなと共有しましょう！

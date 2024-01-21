@@ -34,14 +34,13 @@ export default function Home() {
     setLineVisible(true);
   }, []);
 
-  // 天気APIのエンドポイントとAPIキーを設定 APIを再度叩くときはコメントアウトを外す　ここから
   const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
   // 名城大学の緯度経度
   const lat1 = 35.1356448;
   const lon1 = 136.97606831;
 
-  // 東京都千代田区の緯度経度（適切な値に変更してください）
+  // 東京都千代田区の緯度経度
   const lat2 = 35.6895;
   const lon2 = 139.6917;
 
@@ -52,11 +51,9 @@ export default function Home() {
   // レスポンスからアイコンのURLを取得
   if (weather1) {
     const iconUrl = getWeatherIconUrl(weather1.weather[0].icon);
-    console.log("アイコンのURL:", iconUrl);
   }
   if (weather2) {
     const iconUrl = getWeatherIconUrl(weather2.weather[0].icon);
-    console.log("アイコンのURL:", iconUrl);
   }
 
   useEffect(() => {
@@ -70,7 +67,6 @@ export default function Home() {
         );
 
         if (isMounted) {
-          console.log("名城大学の天気:", response1.data);
           setWeather1(response1.data);
           setLineVisible(true);
         }
@@ -81,7 +77,6 @@ export default function Home() {
         );
 
         if (isMounted) {
-          console.log("東京都千代田区の天気:", response2.data);
           setWeather2(response2.data);
         }
       } catch (error) {
@@ -96,9 +91,9 @@ export default function Home() {
     };
   }, []);
   return (
-    <main className=" p-24 mt-24">
+    <main className="lg:p-24 p-8 mt-24">
       <p className="font-medium ">Hey I’m</p>
-      <h1 className="py-4 text-8xl font-bold relative bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
+      <h1 className="py-4 text-6xl md:text-7xl lg:text-8xl font-bold relative bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
         Ryohei Kamei
         <span
           className={`absolute bottom-0 left-0 w-full h-1 ${
@@ -112,17 +107,14 @@ export default function Home() {
         ></span>
       </h1>
 
-      <p className="py-8 font-medium">
+      <p className="py-8 font-medium break-normal">
         私は愛知県在住で名城大学に所属しており、情報工学を専攻しています。
-        <br />
         プログラミング学習歴は2024年1月時点で8ヶ月で、現在はWebアプリケーションのフロントエンド開発を中心に学習しています。
-        <br />
         主に使用している言語はTypeScriptで、フレームワークはNext.jsを使用しています。
-        <br />
         本サイトでは、私の活動や学んだことを紹介します。
       </p>
       <h2 className="py-10 text-3xl text-center">Acitivity</h2>
-      <div className="flex gap-4 mt-8 text-white">
+      <div className="flex flex-col gap-4 mt-8 text-white md:flex-row">
         <div className="flex-1 bg-black p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
           <div className="relative group">
             <div className="flex justify-center">
