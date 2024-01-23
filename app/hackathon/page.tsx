@@ -63,7 +63,7 @@ const Hackathon: React.FC = () => {
 
   return (
     <div className="lg:p-24 p-8 mt-24">
-      <h1 className="font-bold text-3xl bg-gradient-to-r from-green-300 to-pink-500 bg-clip-text text-transparent">
+      <h1 className="font-bold text-3xl bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent">
         課外活動（ハッカソン）
       </h1>
       <p className="mt-4">
@@ -112,20 +112,26 @@ const Hackathon: React.FC = () => {
           <p>
             ●チーム開発の進め方---チーム内での分担（フロントエンド、バックエンド、デザイン）を行い、一つの成果物を作成することが非常に大変だということを学びました。
           </p>
-          <div className="mt-8 flex justify-center items-center gap-4 ">
-            <p>Git Repository</p>
+          <div className="text-center mt-8">
+            <p className="inline-block border-b-4 border-green-400 p-2">
+              Webサイトリンク・Gitリポジトリ
+            </p>
+          </div>
+          <div className="mt-6 flex justify-center items-center gap-4 ">
             <br />
-            <Link href="https://github.com/tsuki917/uni-life-admin">
+            <Link href="https://uni-life-admin.vercel.app/">
               <Button>Click here</Button>
             </Link>
-            <Link href="https://uni-life-admin.vercel.app/">
-              <Image
-                src="/git-icon.png"
-                alt="git Image"
-                width={100}
-                height={100}
-                className="mb-4 rounded-md shadow-md bg-black"
-              />
+            <Link href="https://github.com/tsuki917/uni-life-admin">
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Image
+                  src="/git-icon.png"
+                  alt="git Image"
+                  width={90}
+                  height={100}
+                  className="mb-4 rounded-md shadow-md bg-black"
+                />
+              </motion.div>
             </Link>
           </div>
         </div>
@@ -165,6 +171,9 @@ const Hackathon: React.FC = () => {
             className="mb-4 rounded-md shadow-md bg-black"
           />
         </div>
+        <p className="text-center text-xs">
+          出典：https://hacku.yahoo.co.jp/meijo2023/
+        </p>
         <div className="mt-7">
           <p className="font-bold">＜学んだこと＞</p>
           <p>
@@ -176,20 +185,26 @@ const Hackathon: React.FC = () => {
           <p>
             ・デザインの重要性---私のチームは、デザインを担当する人がいなかったため、開発に着手する作業に時間がかかりました。
           </p>
-          <div className="mt-8 flex justify-center items-center gap-4 ">
-            <p>Git Repository</p>
+          <div className="text-center mt-8">
+            <p className="inline-block border-b-4 border-green-400 p-2">
+              Webサイトリンク・Gitリポジトリ
+            </p>
+          </div>
+          <div className="mt-6 flex justify-center items-center gap-4 ">
             <br />
-            <Link href="https://github.com/IronRiver/gourmeijo">
+            <Link href="https://gourmeijo.vercel.app/">
               <Button>Click here</Button>
             </Link>
-            <Link href="https://gourmeijo.vercel.app/">
-              <Image
-                src="/git-icon.png"
-                alt="git Image"
-                width={100}
-                height={100}
-                className="mb-4 rounded-md shadow-md bg-black"
-              />
+            <Link href="https://github.com/IronRiver/gourmeijo">
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Image
+                  src="/git-icon.png"
+                  alt="git Image"
+                  width={90}
+                  height={100}
+                  className="mb-4 rounded-md shadow-md bg-black"
+                />
+              </motion.div>
             </Link>
           </div>
         </div>

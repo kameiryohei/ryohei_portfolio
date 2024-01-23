@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Page: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -105,20 +106,26 @@ const Page: React.FC = () => {
           <p>
             ・チーム開発の進め方---チームで分担をして一つの成果物を作ることが非常に大変だということを学びました。
           </p>
+          <div className="text-center mt-8">
+            <p className="inline-block border-b-4 border-blue-400 p-2">
+              Webサイトリンク・Gitリポジトリ
+            </p>
+          </div>
           <div className="mt-8 flex justify-center items-center gap-4 ">
-            <p>Git Repository</p>
             <br />
-            <Link href="https://github.com/kameiryohei/group13">
+            <Link href="https://kameiryohei.github.io/group13/">
               <Button>Click here</Button>
             </Link>
-            <Link href="https://kameiryohei.github.io/group13/">
-              <Image
-                src="/git-icon.png"
-                alt="git Image"
-                width={100}
-                height={100}
-                className="mb-4 rounded-md shadow-md bg-black"
-              />
+            <Link href="https://github.com/kameiryohei/group13">
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Image
+                  src="/git-icon.png"
+                  alt="git Image"
+                  width={90}
+                  height={90}
+                  className="mb-4 rounded-md shadow-md bg-black"
+                />
+              </motion.div>
             </Link>
           </div>
         </div>
@@ -169,20 +176,26 @@ const Page: React.FC = () => {
           <p>
             ・チーム開発の進め方---チームで分担をして一つの成果物を作ることが非常に大変だということを学びました。
           </p>
+          <div className="text-center mt-8">
+            <p className="inline-block border-b-4 border-blue-400 p-2">
+              Webサイトリンク・Gitリポジトリ
+            </p>
+          </div>
           <div className="mt-8 flex justify-center items-center gap-4 ">
-            <p>Git Repository</p>
             <br />
-            <Link href="https://github.com/kameiryohei/pbl-t1-project">
+            <Link href="https://pbl-t1-project.vercel.app/">
               <Button>Click here</Button>
             </Link>
-            <Link href="https://pbl-t1-project.vercel.app/">
-              <Image
-                src="/git-icon.png"
-                alt="git Image"
-                width={100}
-                height={100}
-                className="mb-4 rounded-md shadow-md bg-black"
-              />
+            <Link href="https://github.com/kameiryohei/pbl-t1-project">
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Image
+                  src="/git-icon.png"
+                  alt="git Image"
+                  width={90}
+                  height={90}
+                  className="mb-4 rounded-md shadow-md bg-black"
+                />
+              </motion.div>
             </Link>
           </div>
         </div>

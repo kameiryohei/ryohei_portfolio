@@ -158,15 +158,15 @@ const Header = () => {
                         >
                           <Image
                             src="/takegram.jpg"
-                            alt="亀井涼平"
+                            alt="画像が表示できません"
                             width={120}
-                            height={240}
-                            className="rounded-full"
+                            height={140}
+                            className="rounded-md mx-auto"
                           />
-                          <div className="mb-2 mt-4 text-lg font-medium ">
-                            亀井涼平
+                          <div className="mb-2 mt-4 text-lg font-medium text-center">
+                            Name: 亀井涼平
                           </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
+                          <p className="text-sm leading-tight text-muted-foreground text-center">
                             Belongs to the Faculty of Information Engineering,
                             Meijo University
                           </p>
